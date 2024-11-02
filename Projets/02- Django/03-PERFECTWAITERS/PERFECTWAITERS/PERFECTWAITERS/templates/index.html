@@ -1,0 +1,431 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    
+    <title>ThePerfectWaiters</title>
+</head>
+<body class="body">
+    <div class="banner ">
+        <!-- Page Navbar -->
+        <div class="trailer" style="background-color: gray;">
+            <ul>
+                {% for i in "01234" %}  <!-- 5 itérations -->
+                    {% if forloop.counter0 < moyenne_arrondie %}
+                        <i class="fa-solid fa-star"></i>  <!-- Étoile remplie -->
+                    {% else %}
+                        <i class="fa-regular fa-star"></i>  <!-- Étoile vide -->
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <nav id="navbar" class="navbar">
+            
+            <div class="navbar-menu">
+                <a id='navbar-brand' class="navbar-brand" href="#"><img src = "{% static 'img/logo.svg' %}" alt="the perfect waiters logo"/>
+                </a>
+                <div id="humberger" class="humberger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+    
+            <ul id="nav" class="nav">
+                <li class="nav-item">
+                    <a id="nav-link" class="nav-link" href="#home">Acceuil</a>
+                </li>
+                <li class="nav-item">
+                    <a id="nav-link" class="nav-link" href="#about">Qui somme nous ?</a>
+                </li>
+                <li class="nav-item">
+                    <a id="nav-link" class="nav-link" href="#presentation">Presentation</a>
+                </li>
+                <li class="nav-item">
+                    <a id="nav-link" class="nav-link" href="#reviews">Avis</a>
+                </li>
+                <li class="nav-item">
+                    <a id="nav-link" class="nav-link" href="#team">Equipe</a>
+                </li>
+                <li class="nav-item">
+                    <a id="nav-link" class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+    
+        </nav><!-- End of Page Navbar -->
+    </div><!-- banner -->
+
+
+        <header class="header" id="home">
+            <div class="container-fluid">
+                <div class="header-container">
+                     <!-- about section -->
+                    <div class="header-body" id="header-body">
+                        <h1 class="header-title">
+                            <span class="up">Transformez votre<strong style="font-weight: bold;">Mariage</strong> </span>
+                            <span class="down">en un moment inoubliable.</span>
+                        </h1>
+                        <p class="header-subtitle"> Nos serveurs dévoués prennent soin de chaque détail, pour que vous puissiez savourer chaque émotion. </p>
+                        <a  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@perfectwaiters.com&su=C'est%20pour%20une%20réservation&body=Bonjour,%0D%0AJe%20souhaite%20réserver%20vos%20services.%0D%0ADate:%20[insérer%20la%20date]%0D%0ALieu:%20[insérer%20le%20lieu]%0D%0AMerci%20de%20me%20confirmer%20la%20disponibilité.%0D%0ACordialement,"  target="_blank" class="btn btn-primary rounded-pill header-cta"> 
+                            Réserver </a>
+
+
+                        <div class="social-media-header">
+                        <a href="https://www.snapchat.com/add/perfectwaiters?share_id=7wb6wTMMSxa7SXi5pNzcMg&locale=fr_FR" class="social-media-header"> 
+                        
+                        <i class="fa-brands fa-square-snapchat fa-xl" style="color: #FFD43B;margin:5px;"></i> </a>
+                           
+                                
+                        <a href="https://www.instagram.com/perfectwaiters/" class=""> 
+                            <i class="fa-brands fa-square-instagram fa-xl" style="color: #f24e07;margin:5px;"></i></a>
+                               
+                             
+                        </div>         
+
+                                
+                              
+                    </div>
+                    <video class="section-img" autoplay muted loop playsinline>
+                        <source src="{% static 'img/header.mp4' %}" class="about-img" type="video/mp4">
+                        Votre navigateur ne supporte pas les vidéos HTML5.
+                    </video>
+                    <!-- 
+                    <video  src="img/header.mp4"  alt="About Me">
+                -->
+                </div>
+            </div>
+        </header>
+
+
+
+        <!-- about section -->
+    <section class="section" id="about">
+        <!-- container -->
+        <div class="container-fluid bg-color-light">
+            <!-- about wrapper -->
+            <div class="section-container">
+
+                <div class="section-body">
+
+                    <div class="section-header">
+                        <p class="section-subtitle">Qui somme nous ?</p>
+                        <h2 class="section-title">A Propos De nous</h2>
+                    </div>
+
+                    <div class="section-content">
+                        <img class="section-img" src="{% static 'img/qui_somme_nous.jpg' %}" class="about-img" alt="About Me">
+                        <p class="section-text">
+                            Nous sommes deux jeunes diplômés, passionnés par l'idée de rendre chaque événement unique. En tant qu'entrepreneurs motivés, nous avons accumulé des expériences variées, des réussites aux défis. Chaque projet nous rapproche de notre rêve : offrir un service exceptionnel pour des moments précieux comme les mariages et les fêtes. Avec cœur et détermination, nous nous engageons à créer des souvenirs inoubliables pour vous et vos proches. Ensemble, faisons de votre événement une célébration magique !                            
+                           
+                            <br>
+                            <!--<a href="files/CV_Cherif_Mohamed_EL_Amine.pdf" class="btn btn-outline-primary rounded-pill mt-4"
+                                download>Télécharger Le CV</a>-->
+                        </p>
+                    </div>
+
+                </div>
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+    <section class="section" id="presentation"></section>
+        <!-- container -->
+        <div class="container-fluid ">
+            <!-- about wrapper -->
+            <div class="section-container">
+                <div class="section-body">
+                    <div class="section-header">
+                        <p class="section-subtitle">Quels services nous offrons ?</p>
+                        <h2 class="section-title">Présentation</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="image-grid container">
+                            <div class="image-item">
+                                <img class="img-presentation" src="{% static 'img/buffer2.jpg' %}" alt="Image 1">
+                                <div class="overlay-presentation ">
+                                    <div class="card " style="background-color: transparent; color: white ;">
+                                        <div class="card-body body-card " >
+                                            <h5 class="card-title"> Nos Présentations Soignées </h5>
+                                            <p class="card-text text-presetation" style="text-align: center;"> une présentation soignée du buffet d'entrée et une décoration élégante. 
+                                                Nous accompagnons également les mariés en leur proposant les meilleures positions pour des photos mémorables </p>
+                                        </div>
+                                    </div>       
+                                </div>
+                            </div>
+                        
+                            <div class="image-item">
+                                <img class="img-presentation" src="{% static 'img/fruit.jpg' %}" alt="Image 2">
+                                <div class="overlay-presentation">
+                                    <div class="card " style="background-color: transparent; color: white ;">
+                                        <div class="card-body body-card" >
+                                            <h5 class="card-title" > Une Décoration Fruitière Éblouissante </h5>
+                                            <p class="card-text" style="text-align: center; margin-top: 10px;">
+                                                Nous créons de superbes plats de fruits artistiques pour sublimer vos événements. Élégance, fraîcheur et couleurs pour éblouir vos invités
+                                            </p>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                        
+                            <div class="image-item">
+                                <img class="img-presentation" src="{% static 'img/proprete.jpg' %}" alt="Image 3">
+                                <div class="overlay-presentation">
+                                    <div class="card " style="background-color: transparent; color: white ;">
+                                        <div class="card-body body-card " >
+                                            <h5 class="card-title"> La Pièce Montée, un Moment Inoubliable</h5>
+                                            <p class="card-text" style="text-align: center;"> 
+                                                Nous restons jusqu'à la préparation de la table pour la pièce montée. Nous vous accompagnons pour la découpe et la mise en scène parfaite de ce moment unique
+                                            </p>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                        
+                            <div class="image-item">
+                                <img class="img-presentation" src="{% static 'img/pro.jpg' %}" alt="Image 4">
+                                <div class="overlay-presentation">
+                                    <div class="card " style="background-color: transparent; color: white ;">
+                                        <div class="card-body body-card" >
+                                            <h5 class="card-title"> Une Ambiance Festive et Professionnelle </h5>
+                                            <p class="card-text" style="text-align: center;">
+                                                Nous maintenons une ambiance joyeuse tout au long de la soirée, tout en restant professionnels. Toujours souriants, nous mettons à l'aise vos invités et assurons une atmosphère festive du début à la fin.
+                                            </p>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                        
+                            <div class="image-item">
+                                <img class="img- " src="{% static 'img/slata.jpg' %}" alt="Image 5">
+                                <div class="overlay-presentation">
+                                    <div class="card " style="background-color: transparent; color: white ;">
+                                        <div class="card-body body-card" >
+                                            <h5 class="card-title"> Entrées Spectaculaires et Animées </h5>
+                                            <p class="card-text" style="text-align: center;"> 
+                                                Chaque entrée est accompagnée d'une présentation dansante, ajoutant une touche festive à chaque plat. Nous créons une ambiance dynamique dans toute la salle, pour un repas animé et mémorable
+                                            </p></div>
+                                    </div>   
+                                </div>
+                            </div>
+                        
+                            <div class="image-item">
+                                <img class="img-presentation" src="{% static 'img/proprete2.jpg' %}" alt="Image 6">
+                                <div class="overlay-presentation">
+                                    <div class="card " style="background-color: transparent; color: white ;">
+                                        <div class="card-body body-card" >
+                                            <h5 class="card-title">Service Attentif et Réactif </h5>
+                                            <p class="card-text" style="text-align: center;">
+                                                Nous veillons constamment à ce que rien ne manque sur les tables, restant à disposition de tous les invités tout au long de la soirée. Le service est rapide et efficace, assurant une expérience sans faille
+                                            </p>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+    
+
+<!-- viewers-->
+<section class="section-avis" id="reviews">
+    <!-- container -->
+    <div class="container-fluid avis-container" style="margin-bottom:0px;">
+        <div class="section-container" >
+            <div class="section-body"></div>
+                <div class="section-header">
+                    <p class="section-subtitle" style="color:white">Donnez nous votre avis </p>
+                    <h2 class="section-title" style="color:white">Avis</h2><br>
+                    <p style="color:white">La moyenne c'est : {{ moyenne_arrondie }}</p>
+                    
+
+                
+                <div class="section-content section-content-avis">
+
+                    <a href="#formulaire" id= "btn-add-review" class="btn btn-add-review"> <i class="fa-solid fa-comment"></i> </a>
+                    <!--Add reviews -->
+    
+        <!-- Formulaire de saisie de commentaire masqué -->
+            <form action="" method="POST" id="add-review" class="add-review ">
+                {% csrf_token %}
+                <div class="form-group">
+                <input name="name" id="name" type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Votre nom">
+                </div>
+                
+                <div class="form-group">
+                    <textarea  name = "comment" rows="5" cols="40" class="message form-control" id="comment" placeholder="Donnez nous votre avis :)"></textarea>
+                </div>
+
+                <ul class="form-group ">
+                    {% for i in "01234" %}
+                        <i class="fa-regular form-fa-star fa-star" data-index="{{ i }}"></i>
+                    {% endfor %}
+                </ul>
+
+                 <!-- Champ caché pour stocker l'évaluation -->
+                <input type="hidden" name="evaluation" id="evaluation" value="0">
+
+                <button id="" type="submit" class="btn">Submit</button>
+            </form>
+                    <!-- Section du formulaire pour ajouter un avis -->
+
+                    {% for item in data %}
+                    <div class="card card-avis {% if forloop.counter > 3 %}card-hidden{% endif %}">
+                        <ul>
+                            {% for i in "01234" %}  <!-- 5 itérations -->
+                                {% if forloop.counter0 < item.evaluation %}
+                                    <i class="fa-solid fa-star"></i>  <!-- Étoile remplie -->
+                                {% else %}
+                                    <i class="fa-regular fa-star"></i>  <!-- Étoile vide -->
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+
+                        
+                      
+                        <p class="card-text">{{item.comment}}</p>    
+                        <button class="btn btn-primary btn-show-more" onclick="toggleText(this)">Afficher plus</button>
+                    </div>
+                    {% endfor %}
+                </div><!-- end section content -->
+                <div class="card-show-more">
+                    <!-- Bouton pour afficher ou masquer les cartes cachées -->
+                    <button id="show-more-cards" class="show-more-btn show-more-btn-avis" onclick="toggleShowMore()">PLUS D'AVIS</button>
+                </div>
+            </div><!-- end section body-->
+        </div><!-- wrapper -->
+    </div><!-- avis container -->
+
+    <!-- Bouton pour ajouter un commentaire 
+            <div class="add-comment-div ">  
+                <button id="add-comment-btn" class=" w3-circle w3-card-4 add-comment-btn " onclick="showAddComment()">🗨</button>
+            </div>
+    -->
+    </div>
+
+</section>
+
+<!-- viewers end-->
+
+<!-- Equipe section -->
+<section class="section" id="team">
+    <!-- container -->
+    <div class="container-fluid bg-color-light">
+        <!-- Equipe wrapper -->
+        <div class="section-container">
+            <!-- section body -->
+            <div class="section-body">
+
+                <div class="section-header">
+                    <p class="section-subtitle">Membres de l'equipe</p>
+                    <h2 class="section-title">Equipe</h2>
+                </div>
+
+                <div class="section-content card-content-competence">
+
+                    <div class="card card-team">
+                        <div class="image-container">  <!-- Nouveau conteneur -->
+                            <img class="card-img-top-mo" src="{% static 'img/mohamed.PNG' %}" alt="Card image cap">
+                        </div>
+                            <div class="card-body text-center">
+                            <h5 class="card-title"> CHERIF MOHAMED </h5>
+                            <h6 class="card-subtitle"> Nos expériences </h6>
+                            <p class="card-text"> <br> - Développeur Informatique <br>- Serveur (Restaurant, Mariage) -,<br> Cuisinier <br>- Organisateur de Rondonée - <br>Livreur </p>
+                                
+                        </div>
+                    </div>
+
+                    <div class="card card-team">
+                        <img class="card-img-top" src="{% static 'img/younes.PNG' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">KECHICHE YOUNES</h5>
+                            <h6 class="card-subtitle"> Nos expériences </h6>
+                            <p class="card-text"> <br> - Développeur Informatique <br>- Serveur (Restaurant, Mariage) -,<br> Marketing <br>- Vendeur - <br> Sécurité </p>
+                            
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div><!-- end of section body -->
+        </div><!-- end of equipe wrapper -->
+    </div><!-- end of container -->
+</section> <!-- end of equipe section -->
+
+
+        
+
+
+        <footer class="footer" id ="contact">
+
+            <div class="newsletter-container">
+                <label for="email" class="newsletter-label">Newsletter</label>
+                <div class="input-container">
+                  <input type="email" id="email" class="newsletter-input" placeholder="Votre mail" />
+                  <button class="submit-button">
+                    <i class="fas fa-paper-plane"></i>
+                  </button>
+                </div>
+              </div>
+
+            <div class="footer-content">
+
+
+                
+                
+            <div class="media ">
+
+              
+
+                <div class="social-media container">
+                    <div class="social-item">
+                      <a href="https://www.instagram.com/perfectwaiters/">
+                        <img src="{% static 'img/ic_insta.svg' %}">
+                      </a>
+                        <span>PerfectWaiters</span>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://www.snapchat.com/add/perfectwaiters?share_id=7wb6wTMMSxa7SXi5pNzcMg&locale=fr_FR">
+                            <img src="{% static 'img/ic_snap.svg' %}">
+                        </a>
+                      <span>PerfectWaiters</span>
+                    </div>
+                  </div>
+              
+                  <div class="contact-info container">
+                    <div class="contact-item">
+                        <img src="{% static 'img/ic_gmail.svg' %}">
+                      <span>reserver@perfectWaiters.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="{% static 'img/ic_phone.svg' %}">
+                        <span>07 66 59 85 66<br/> 07 53 50 04 60</span><br/>
+                      
+                    </div>
+                  </div>
+            </div>
+            <div class="separateur"></div>
+            <p class="copyright text-center">
+                Copyright © 2024 PerfectWaiters Inc. Tous droits réservés.
+            </p>
+        </div>
+
+       
+        </footer>
+        <script src="{% static 'js/code.js' %}"></script>
+</body>
+</html>
